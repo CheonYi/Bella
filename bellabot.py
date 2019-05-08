@@ -14,7 +14,7 @@ async def on_ready():
     print(bot.user.name) 
     print(bot.user.id)
     print("------------------")
-    await bot.change_presence(game=discord.Game(name="서버주소: EricaS.kr", type=1))
+    await bot.change_presence(game=discord.Game(name="서버주소: Bellaage.kr", type=1))
 @bot.event
 async def on_message(message):
     if message.content.startswith("/상담"):
@@ -36,17 +36,18 @@ async def on_message(message):
         await bot.send_message(discord.utils.get(message.server.channels, name=name2), "@everyone\n"+ "<@"+id+">님의 상담을 시작합니다.\n상담 내용은 본인, 관리진만 확인 할 수 있습니다.\n상담이 끝나면 채널이 삭제 될 수도 있습니다.")
     if message.content.startswith("공지띄우기1"):
         await bot.delete_message(message)
-        embed = discord.Embed(title="에리카 관리자",
+        embed = discord.Embed(title="벨라",
                               description="",
                               color=0x00ff00)
         await bot.send_message(message.channel, embed=embed)
     if message.content.startswith("/서버정보"):
         embed = discord.Embed(color=0x00ff00)
-        embed.add_field(name="서버 이름", value="EricaServer", inline=True)
+        embed.add_field(name="서버 이름", value="BellaAGE", inline=True)
         embed.add_field(name="서버 관리자", value="천이", inline=True)
-        embed.add_field(name="서버 주소", value="EricaS.kr", inline=True)
-        embed.add_field(name="오픈일", value="2019-05-05", inline=True)
-        embed.add_field(name="카페 주소", value="https://cafe.naver.com/ericas", inline=True)
+        embed.add_field(name="서버 주소", value="Bellaage.kr", inline=True)
+        mbed.add_field(name="시즌1 오픈일", value="2018-05-21", inline=True)
+        embed.add_field(name="오픈일", value="2019-05-??", inline=True)
+        embed.add_field(name="카페 주소", value="https://cafe.naver.com/bellaage", inline=True)
         embed.set_thumbnail(url=message.author.avatar_url)
         await bot.send_message(message.channel, embed=embed)
     if message.content.startswith("봇 "):
