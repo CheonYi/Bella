@@ -14,7 +14,7 @@ async def on_ready():
     print(bot.user.name) 
     print(bot.user.id)
     print("------------------")
-    await bot.change_presence(game=discord.Game(name="서버주소: Bellaage.kr", type=1))
+    await bot.change_presence(game=discord.Game(name="서버주소: BLAGE.kr", type=1))
 @bot.event
 async def on_message(message):
     if message.content.startswith("/상담"):
